@@ -7,8 +7,6 @@ html {
   background-color: #05000a;
   overflow-x: hidden;
 }
-
-
 /* Hero Section */
 #particleCanvas {
   position: fixed;
@@ -241,12 +239,12 @@ html {
 }
 .client-bar-box {
   margin-top: 20px;
-  height: 20vh;
   width: 100%;
   background-image: linear-gradient(45deg, #5d2691, #c9a110);
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  padding: 10px 0px;
 }
 .box1 {
   display: flex;
@@ -254,6 +252,10 @@ html {
 }
 .box1 h5 {
   font-size: 50px;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+    margin: 0px 0px 0px 0px;
 }
 .box1 p {
   display: flex;
@@ -269,8 +271,6 @@ html {
   height: 15vh;
 }
 .copmany-intro {
-  height: 70vh;
-  width: 100%;
   display: flex;
   padding: 0px 90px;
   margin-top: 80px;
@@ -321,7 +321,7 @@ html {
   border-radius: 20px;
 }
 .company-text {
-  display: flex;
+  /* display: flex; */
   justify-content: center;
   flex-direction: column;
   height: 70vh;
@@ -425,6 +425,8 @@ html {
 /* Next & previous buttons */
 .prev,
 .next {
+  background: transparent;
+    border: none;
   cursor: pointer;
   position: absolute;
   top: 50%;
@@ -434,7 +436,6 @@ html {
   color: #c9a110;
   font-weight: bold;
   font-size: 30px;
-  border-radius: 3px;
   user-select: none;
   transition: 0.3s;
 }
@@ -868,50 +869,16 @@ footer {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  .navbar {
-    height: 10vh;
-  }
-  .logo {
-    margin: 0;
-  }
-  .navbar-toggler {
-    display: block;
-  }
-
-  .navbar-links {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    text-align: center;
-    top: 78px;
-    right: 20px;
-    background: #151441;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 10px 50px 20px 50px;
-    border-radius: 5px;
-  }
-
-  .navbar-links.open {
-    display: flex;
-  }
-  .navbar-nav {
-    flex-direction: column;
-  }
-  .navbar-nav li a {
-    color: #fff !important;
-  }
-  .nav-btn {
-    margin-top: 25px;
-  }
   .content {
-    padding: 0px 70px;
+    padding: 0px 0px;
+    /* padding: 0px 70px; */
     width: 100%;
     margin-top: 250px;
     height: auto;
   }
   .background-video {
     height: 100vh;
-    width: auto;
+    /* width: auto; */
     min-width: 100%;
   }
   .hero-left {
@@ -949,7 +916,6 @@ footer {
   }
   .client-bar-box {
     flex-direction: column;
-    height: 80vh;
   }
   .Client-num h3 {
     font-size: 30px;
@@ -959,6 +925,9 @@ footer {
     align-items: center;
     text-align: center;
     gap: 5px;
+  }
+  .box1 h5{
+    margin: 50px 0px 0px 0px;
   }
   .vertival-line {
     border-right: none;
@@ -981,7 +950,7 @@ footer {
   }
   .copmany-intro {
     padding: 0px 0px;
-    margin-top: 940px;
+    margin-top: 400px;
   }
   .company-box {
     flex-direction: column-reverse;
@@ -1071,7 +1040,7 @@ footer {
   .content {
     justify-content: center;
     /* margin-top: 140px; */
-    padding: 0px 30px;
+    /* padding: 0px 30px; */
   }
   .hero_title {
     font-size: 34px;
