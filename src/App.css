@@ -976,9 +976,6 @@ footer {
   .service-item1 {
     width: 100%;
   }
-  .service-card {
-    /* height: 45vh; */
-  }
   .service-box {
     margin: 0px 50px;
   }
@@ -1085,14 +1082,8 @@ footer {
   .hero-btn2 {
     padding: 10px 20px;
   }
-  .Service {
-    /* height: 280vh; */
-  }
-  .service-item1 {
-    /* height: 35vh; */
-  }
+ 
   .service-card {
-    /* height: 31vh; */
     gap: 10px;
   }
   .service-box {
