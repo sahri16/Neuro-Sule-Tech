@@ -71,12 +71,9 @@ function Home() {
 
   return (
     <div className="all-content">
-      {/* Navbar Section */}
-      
-
       {/* Hero Section */}
       <section className="heroSection">
-      <canvas id="particleCanvas"></canvas>
+      {/* <canvas id="particleCanvas"></canvas> */}
         <video autoPlay loop muted playsInline className="background-video">
           <source src="/assets/1992-153555258_small.mp4" />
           Your browser does not support the video tag.

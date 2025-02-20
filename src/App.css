@@ -3,28 +3,21 @@ body,
 html {
   margin: 0;
   padding: 0;
+  /* height: 100%; */
   font-family: Arial, sans-serif;
   background-color: #05000a;
   overflow-x: hidden;
 }
-/* Hero Section */
-#particleCanvas {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 9999;
-  pointer-events: none;
+.active{
+  background: transparent !important;
 }
-
+/* Hero Section */
 .heroSection {
   position: relative;
   width: 100%;
   height: 100vh;
   overflow: hidden;
 }
-
 .overlay {
   position: absolute;
   top: 0;
@@ -463,9 +456,9 @@ html {
   display: inline-block;
   transition: background-color 0.4s ease;
 }
-.active,
+.dot-container .active,
 .dot:hover {
-  background-color: #c9a110;
+  background-color: #c9a110 !important;
 }
 q {
   font-style: italic;
@@ -640,7 +633,7 @@ q {
 }
 .contect-section {
   /* height: 90vh; */
-  margin: 0px 50px;
+  margin: 0px 80px;
   color: #fff;
   gap: 80px;
   display: flex;
@@ -712,16 +705,22 @@ q {
   color: red;
 }
 .lable {
+  padding-bottom: 5px;
   font-size: 16px;
 }
 .text-form span {
   color: #fff;
 }
 .paddText {
+  color: #fff;
   background: #000;
   border-radius: 5px;
   padding: 5px;
   border: 1px solid #5d2691;
+}
+input:focus {
+  border-color: #c9a110; 
+  outline: none; 
 }
 .btnRes button {
   background-image: linear-gradient(45deg, #5d2691, #c9a110);
@@ -729,142 +728,22 @@ q {
   padding: 5px 0px;
   text-align: center;
   border-radius: 50px;
+  border: none;
 }
 .btnRes button:hover {
   background: #5d2691;
   box-shadow: 0px 2px 20px 4px rgba(213, 184, 241, 0.61);
 }
-
-footer {
-  position: relative;
-  width: 100%;
-  height: 70vh;
-  overflow: hidden;
-  color: #fff;
-  margin-top: 120px;
+.content-wrap {
+  flex-grow: 1;
 }
-
-.background-video-footer {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 0;
-}
-
-.overlay-footer {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(45, 21, 68, 0.555);
-  z-index: 1;
-}
-
-.footer-content {
-  position: relative;
-  z-index: 2;
+.page-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  padding: 40px 50px;
+  min-height: 100vh;
 }
-
-.top-footer {
-  display: flex;
-  width: 100%;
-  max-width: 1200px;
-  padding: 20px 0;
-}
-
-.footer-logo {
-  gap: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  width: 40%;
-  padding-right: 20px;
-  margin-right: 220px;
-}
-
-.footer-logo img {
-  height: 100px;
-}
-
-.footer-logo p {
-  color: rgb(226, 223, 223);
-}
-
-.social-icon i {
-  background-color: white;
-  color: #151441;
-  border-radius: 50px;
-  padding: 8px;
-  margin: 5px;
-  font-size: 24px;
-  transition: 0.3s;
-  cursor: pointer;
-}
-
-.social-icon i:hover {
-  background-color: #5d2691;
-  color: white;
-}
-
-.footer-service,
-.footer-company {
-  padding-top: 10px;
-}
-.footer-text {
-  gap: 200px;
-  display: flex;
-}
-.ser-com h3 {
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  font-size: 22px;
-  margin-bottom: 15px;
-}
-
-.ser-com ul {
-  list-style: none;
-  padding: 0;
-}
-
-.ser-com ul li {
-  margin-bottom: 2px;
-}
-
-.ser-com ul li a {
-  font-size: 12px;
-  color: white;
-  text-decoration: none;
-}
-
-.ser-com ul li a:hover {
-  color: #5d2691;
-}
-
-.divider {
-  width: 90%;
-  height: 1px;
-  background-color: #5d2691;
-  margin: 10px auto;
-  z-index: 8;
-}
-
-.bottom-footer {
-  text-align: center;
-  width: 100%;
-  padding-top: 40px;
-}
-
-.bottom-footer p {
-  font-size: 12px;
+input, textarea {
+  caret-color: #c9a110; /* Cursor ka color red hoga */
 }
 
 /* Responsive Design */
@@ -1019,20 +898,7 @@ footer {
   .lable-r1 {
     flex-direction: column;
   }
-  footer {
-    height: 90vh;
-  }
-  .top-footer {
-    flex-direction: column;
-    gap: 80px;
-  }
-  .footer-logo {
-    width: 100%;
-    margin-right: 0;
-  }
-  .footer-text {
-    gap: 80px;
-  }
+
 }
 
 /* Further adjustments for very small screens */
@@ -1128,7 +994,8 @@ footer {
     padding: 30px 20px;
   }
   .contact-text h2 {
-    font-size: 25px;
+    font-size: 24px;
+    margin: 0px;
   }
 }
 
