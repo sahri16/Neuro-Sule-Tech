@@ -12,7 +12,7 @@ function Home() {
   useEffect(() => {
     AOS.init({
       duration: 1000,  // Animation duration (1s)
-      once: true,       // Run only once
+      once: false,       // Run only once
     });
     AOS.refresh(); // Refresh AOS to detect new elements
   }, []);
@@ -252,16 +252,16 @@ function Home() {
         <div className="explore-float">
           <div className="thumbnails">
             <div className="thumbnail">
-              <img src="/assets/explore-img1.png" alt="Image 1" />
+              <img src="/assets/1.png" alt="Image 1" />
             </div>
             <div className="thumbnail">
-              <img src="/assets/explore-img1.png" alt="Image 2" />
+              <img src="/assets/2.png" alt="Image 2" />
             </div>
             <div className="thumbnail">
-              <img src="/assets/explore-img1.png" alt="Image 3" />
+              <img src="/assets/3.png" alt="Image 3" />
             </div>
             <div className="thumbnail">
-              <img src="/assets/explore-img1.png" alt="Image 4" />
+              <img src="/assets/4.png" alt="Image 4" />
             </div>
           </div>
           <a href="#" className="explore-circle">
