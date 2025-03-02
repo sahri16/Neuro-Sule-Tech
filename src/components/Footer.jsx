@@ -13,7 +13,7 @@ function Footer() {
       <div className="footer-content">
         <div className="top-footer">
           <div className="footer-logo">
-            <img src="/assets/logo-Borcelle.svg" alt="Logo" />
+            <img src="/assets/Neuro sule tech-04.png" alt="Logo" />
             <p>
               Transforming Ideas into Digital Excellence. Elevate your online
               presence with our innovative solutions and strategic digital

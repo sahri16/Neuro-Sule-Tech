@@ -23,7 +23,7 @@ const Navbar = () => {
       <div className="container-fluid">
         {/* Logo */}
         <NavLink to="/" className="logo">
-          <img src="/assets/logo-Borcelle.svg" alt="Logo" /> Neural Soul Tech
+          <img src="/assets/Neuro sule tech-04.png" alt="Logo" /> Neural Soul Tech
         </NavLink>
 
         {/* Navbar Toggle Button */}
