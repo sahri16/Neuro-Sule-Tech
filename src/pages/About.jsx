@@ -7,29 +7,29 @@ import '../style/About.css';
 function About() {
   const logos = [
     {
-      src: "/assets/client-logo1.png",
+      src: "public/Neuro sule tech-04.png",
       alt: "Client 1",
       desc: "Developed a responsive e-commerce platform.",
       link: "/projects/client1"
     },
     {
-      src: "/assets/client-logo2.png",
+      src: "public/Neuro sule tech-04.png",
       alt: "Client 2",
       desc: "Built a custom WordPress solution.",
       link: "/projects/client2"
     },
     {
-      src: "/assets/client-logo3.png",
+      src: "public/Neuro sule tech-04.png",
       alt: "Client 3",
       desc: "UI/UX for fintech application.",
       link: "/projects/client3"
     }
   ];
-  
+
   // Combine twice for seamless looping
   const loopLogos = logos.concat(logos);
 
-  
+
   // Initialize AOS animations
   useEffect(() => {
     AOS.init({
@@ -108,51 +108,48 @@ function About() {
         </div>
       </div>
 
-
-      <div className="team">
-  <div className="team-H">
-    <h3>MEET THE NEURO-STARS</h3>
-  </div>
-  <div className="team-tag">
-    <p>Crafting Brands That Shine Bright!</p>
-  </div>
-  <div className="team-member">
-    <div className="mem1">
-      <img src="/assets/ceo-removebg-preview.png" alt="CEO" />
-      <h4>Sahrish Anfal</h4>
-      <h5>Founder & CEO</h5>
-    </div>
-    <div className="mem1">
-    <img src="/assets/ceo-removebg-preview.png" alt="CEO" />
-      <h4>Sahrish Anfal</h4>
-      <h5>Founder & CEO</h5>
-    </div>
-    <div className="mem1">
-    <img src="/assets/ceo-removebg-preview.png" alt="CEO" />
-      <h4>Sahrish Anfal</h4>
-      <h5>Founder & CEO</h5>
-    </div>
-  </div>
-</div>
-
-
-<section className="trusted-clients">
-  <h2>Trusted by Leading Brands</h2>
-  <div className="scroll-wrapper">
-    <div className="scroll-track">
-      {loopLogos.map((logo, index) => (
-        <div className="client-card" key={index}>
-          <img src={logo.src} alt={logo.alt} />
-          <div className="client-info">
-            <p>{logo.desc}</p>
-            <a href={logo.link} className="view-project">View Project</a>
+      <div className="trusted-clients">
+        <h2>Trusted by Leading Brands</h2>
+        <div className="scroll-wrapper">
+          <div className="scroll-track">
+            {loopLogos.map((logo, index) => (
+              <div className="client-card" key={index}>
+                <img src={logo.src} alt={logo.alt} />
+                <div className="client-info">
+                  <p>{logo.desc}</p>
+                  <a href={logo.link} className="view-project">View Project</a>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
-      ))}
-    </div>
-  </div>
-</section>
+      </div>
 
+      <div className="team">
+        <div className="team-H">
+          <h3>MEET THE NEURO-STARS</h3>
+        </div>
+        <div className="team-tag">
+          <p>Crafting Brands That Shine Bright!</p>
+        </div>
+        <div className="team-member">
+          <div className="mem1">
+            <img src="/assets/ceo-removebg-preview.png" alt="CEO" />
+            <h4>Sahrish Anfal</h4>
+            <h5>Founder & CEO</h5>
+          </div>
+          <div className="mem1">
+            <img src="/assets/ceo-removebg-preview.png" alt="CEO" />
+            <h4>Sahrish Anfal</h4>
+            <h5>Founder & CEO</h5>
+          </div>
+          <div className="mem1">
+            <img src="/assets/ceo-removebg-preview.png" alt="CEO" />
+            <h4>Sahrish Anfal</h4>
+            <h5>Founder & CEO</h5>
+          </div>
+        </div>
+      </div>
 
 
     </>

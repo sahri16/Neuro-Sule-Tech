@@ -111,7 +111,6 @@ h3 {
 .valueimg {
   position: relative;
   display: inline-block;
-  /* background: #b94343; */
   background: #151441;
   height: 85vh;
   width: 70%;
@@ -143,6 +142,7 @@ h3 {
 
 .value p {
   padding-top: 15px;
+  color: rgb(226, 223, 223);
 }
 
 .MissViss {
@@ -175,10 +175,102 @@ h3 {
   font-size: 21px;
 }
 
+.mission-text p {
+  color: rgb(226, 223, 223);
+}
+
 .vission-box {
   margin-top: 33px;
 }
 
+.trusted-clients {
+  margin: 150px 50px 0px 50px;
+  padding: 60px 150px;
+  text-align: center;
+  color: white;
+  background: #0e0e1a;
+}
+
+.trusted-clients h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+
+.scroll-wrapper {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.scroll-track {
+  display: flex;
+  width: max-content;
+  animation: scroll-left 50s linear infinite;
+}
+
+.client-card {
+  flex: 0 0 auto;
+  width: 200px;
+  height: 130px;
+  background-color: #151441;
+  margin: 0 15px;
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.client-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 20px;
+}
+
+/* Optional hover info box */
+.client-info {
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(0deg, rgba(93, 38, 145, 0.85), rgba(201, 161, 16, 0.25));
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  transition: bottom 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.client-card:hover .client-info {
+  bottom: 0;
+}
+
+.view-project {
+  display: inline-block;
+  margin: 8px 20px 0px 20px;
+  background-color: #5d2691;
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 12px;
+  text-decoration: none;
+}
+
+/* Animation keyframes */
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
 
 .team {
   margin: 100px 50px 50px;
@@ -246,87 +338,91 @@ h3 {
 }
 
 
-
-.trusted-clients {
-  margin: 0px 40px 0px  40px;
-  padding: 60px 20px;
-  text-align: center;
-  color: white;
-  background: #0e0e1a;
+/* Responsive Design */
+@media (max-width: 768px) {
+  
 }
 
-.trusted-clients h2 {
-  font-size: 2.5rem;
-  margin-bottom: 30px;
-}
-
-.scroll-wrapper {
-  width: 100%;
-  overflow: hidden;
-  position: relative;
-}
-
-.scroll-track {
-  display: flex;
-  width: max-content;
-  animation: scroll-left 50s linear infinite;
-}
-
-.client-card {
-  flex: 0 0 auto;
-  width: 200px;
-  height: 130px;
-  background-color: #4e3030;
-  margin: 0 15px;
-  border-radius: 8px;
-  position: relative;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.client-card img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  padding: 20px;
-}
-
-/* Optional hover info box */
-.client-info {
-  position: absolute;
-  bottom: -100%;
-  left: 0;
-  width: 100%;
-  background-color: rgba(21, 20, 65, 0.9);
-  color: #fff;
-  padding: 10px;
-  text-align: center;
-  transition: bottom 0.3s ease;
-}
-
-.client-card:hover .client-info {
-  bottom: 0;
-}
-
-.view-project {
-  display: inline-block;
-  margin-top: 8px;
-  background-color: #5d2691;
-  padding: 5px 10px;
-  border-radius: 5px;
-  color: #fff;
-  font-size: 12px;
-  text-decoration: none;
-}
-
-/* Animation keyframes */
-@keyframes scroll-left {
-  0% {
-    transform: translateX(0%);
+/* Further adjustments for very small screens */
+@media screen and (max-width: 480px) {
+  .top{
+    height: 50vh;
   }
-  100% {
-    transform: translateX(-50%);
+  .video-heading{
+    width: 70%;
+  }
+  .company-story {
+    flex-direction: column;
+    margin: 100px 20px 0px 20px;
+  }
+
+  .cmpyStoryImg img {
+    height: 30vh;
+  }
+
+  .CmpIntro {
+    margin-top: 50px;
+    width: 100%;
+  }
+
+  .mission {
+    flex-direction: column;
+    gap: 40px;
+    margin: 100px 20px 0px 20px;
+  }
+
+  .valueimg {
+    width: 100%;
+    height: 50vh;
+  }
+
+  .value {
+    padding: 250px 30px 0px 30px;
+  }
+
+  .value span {
+    font-size: 18px;
+  }
+
+  .value h3 {
+    font-size: 22px;
+  }
+
+  .value p {
+    padding-top: 10px;
+    font-size: 15px;
+  }
+
+  .MissViss {
+    margin: 0px;
+    width: 100%;
+    height: 65vh;
+  }
+
+  .MissViss1 {
+    height: 28vh;
+  }
+
+  .mission-text {
+    margin: 30px;
+    gap: 20px;
+  }
+
+  .mission-text h4 {
+    font-size: 18px;
+  }
+
+  .mission-text p {
+    font-size: 15px;
+  }
+  .trusted-clients {
+    margin: 100px 20px 0px 20px;
+    padding: 60px 15px
+  }
+  .trusted-clients h2 {
+    font-size: 2rem;
+  }
+  .team {
+    margin: 100px 30px 0px 30px;
   }
 }
