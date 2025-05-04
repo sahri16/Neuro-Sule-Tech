@@ -57,10 +57,13 @@ function About() {
       </div>
 
       <div className="mission">
-        <div className='value'>
-          <span>Our Value</span>
-          <h3></h3>
-          <p></p>
+        <div className="valueimg">
+          <img src="/assets/corporate-employee-typing-data-financial-report-planning-business-development-with-economy-graphs-female-manger-checking-online-diagrams-analytics-late-night-handheld-shot.jpg" alt="" />
+          <div className='value'>
+            <span>Our Value</span>
+            <h3></h3>
+            <p></p>
+          </div>
         </div>
         <div className='MissViss'>
           <div className='mission'></div>

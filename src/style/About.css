@@ -88,3 +88,23 @@ margin: 100px 90px 0px 50px;
 .CmpIntro p{
     color: rgb(226, 223, 223);
 }
+
+.valueimg{
+  position: relative;
+  display: inline-block;
+  margin: 50px;
+}
+.valueimg img{
+  height: 60vh;
+}
+.value{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 5px;
+}
