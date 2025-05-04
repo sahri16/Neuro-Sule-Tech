@@ -89,22 +89,54 @@ margin: 100px 90px 0px 50px;
     color: rgb(226, 223, 223);
 }
 
+
+.mission{
+  display: flex;
+  margin: 50px;
+  margin-top: 100px;
+}
 .valueimg{
   position: relative;
   display: inline-block;
-  margin: 50px;
+  background: #b94343;
+  height: 85vh;
+  width: 70%;
 }
-.valueimg img{
+/* .valueimg img{
   height: 60vh;
-}
+} */
 .value{
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  padding-left: 40px;
+  padding-top: 350px;
+  top: 0%;
+  left: 0%;
   color: white;
-  font-size: 24px;
-  font-weight: bold;
-  padding: 10px;
   border-radius: 5px;
+}
+.value span{
+  font-size: 20px;
+  font-weight: bold;
+}
+.value h3{
+  font-size: 45px;
+  font-weight: bold;
+}
+.value p{
+  padding-top: 15px;
+}
+
+.MissViss{
+  margin-left: 40px;
+  height: 85vh;
+  width: 30%;
+  background-color: aqua;
+}
+
+.MissViss1{
+  height: 50vh;
+  background-color: #c9a110;
+  display: grid;
+ justify-content: space-between;
+ margin: 20px;
 }

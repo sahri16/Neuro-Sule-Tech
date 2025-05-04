@@ -58,16 +58,16 @@ function About() {
 
       <div className="mission">
         <div className="valueimg">
-          <img src="/assets/corporate-employee-typing-data-financial-report-planning-business-development-with-economy-graphs-female-manger-checking-online-diagrams-analytics-late-night-handheld-shot.jpg" alt="" />
+          {/* <img src="/assets/corporate-employee-typing-data-financial-report-planning-business-development-with-economy-graphs-female-manger-checking-online-diagrams-analytics-late-night-handheld-shot.jpg" alt="" /> */}
           <div className='value'>
             <span>Our Value</span>
-            <h3></h3>
-            <p></p>
+            <h3>Discover the Glow with Neuro Sule Marketing Magic</h3>
+            <p>Choose Alphagon for digital excellence with smart designs and sharp results. Let us elevate your brand with innovative solutions that drive success.</p>
           </div>
         </div>
         <div className='MissViss'>
-          <div className='mission'></div>
-          <div className='vission'></div>
+          <div className='MissViss1 mission-box'></div>
+          <div className='MissViss1 vission-box'></div>
         </div>
       </div>
 
