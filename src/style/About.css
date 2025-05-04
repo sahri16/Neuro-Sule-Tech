@@ -4,15 +4,18 @@
   color: white;
   box-sizing: border-box;
 }
-h3{
-    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+
+h3 {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
+
 .top {
   position: relative;
   width: 100%;
   height: 70vh;
   overflow: hidden;
 }
+
 .background-video {
   position: absolute;
   top: 0;
@@ -23,6 +26,7 @@ h3{
   border-bottom: 1px solid #151441;
   border-radius: 0px 0px 70px 70px;
 }
+
 .overlay {
   position: absolute;
   top: 0;
@@ -33,79 +37,91 @@ h3{
   background-color: rgba(16, 9, 24, 0.555);
   z-index: 1;
 }
+
 .video-heading {
-    position: absolute;
-    top: 55%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    z-index: 10;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    width: 100%; 
-  }
-  
-.video-heading h2{
-    font-size: 60px;
-    font-weight: bold;
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
 }
+
+.video-heading h2 {
+  font-size: 60px;
+  font-weight: bold;
+}
+
 .video-heading p {
   font-size: 18px;
 }
 
 
-.company-story{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-   /* width: 100%; */
-margin: 100px 90px 0px 50px;
+.company-story {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* width: 100%; */
+  margin: 100px 90px 0px 50px;
 }
-.cmpyStoryImg{
-    width: 50%;
-    display: flex;
-    justify-content: center;
+
+.cmpyStoryImg {
+  width: 50%;
+  display: flex;
+  justify-content: center;
 }
-.cmpyStoryImg img{
-    height: 50vh;
+
+.cmpyStoryImg img {
+  height: 50vh;
 }
-.CmpIntro{
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+
+.CmpIntro {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
-.CmpIntro span{
-    color: #c9a110;
-    font-style: italic;
+
+.CmpIntro span {
+  color: #c9a110;
+  font-style: italic;
 }
-.CmpIntro h3{
-    font-size: 35px;
+
+.CmpIntro h3 {
+  font-size: 35px;
 }
-.CmpIntro p{
-    color: rgb(226, 223, 223);
+
+.CmpIntro p {
+  color: rgb(226, 223, 223);
 }
 
 
-.mission{
+.mission {
   display: flex;
   margin: 50px;
   margin-top: 100px;
 }
-.valueimg{
+
+.valueimg {
   position: relative;
   display: inline-block;
-  background: #b94343;
+  /* background: #b94343; */
+  background: #151441;
   height: 85vh;
   width: 70%;
+  border-radius: 20px;
 }
+
 /* .valueimg img{
   height: 60vh;
 } */
-.value{
+.value {
   position: absolute;
   padding-left: 40px;
   padding-top: 350px;
@@ -114,29 +130,117 @@ margin: 100px 90px 0px 50px;
   color: white;
   border-radius: 5px;
 }
-.value span{
+
+.value span {
   font-size: 20px;
   font-weight: bold;
 }
-.value h3{
+
+.value h3 {
   font-size: 45px;
   font-weight: bold;
 }
-.value p{
+
+.value p {
   padding-top: 15px;
 }
 
-.MissViss{
+.MissViss {
   margin-left: 40px;
   height: 85vh;
   width: 30%;
-  background-color: aqua;
 }
 
-.MissViss1{
-  height: 50vh;
+.MissViss1 {
+  position: relative;
+  border-radius: 20px;
+  height: 40vh;
   background-color: #c9a110;
-  display: grid;
- justify-content: space-between;
- margin: 20px;
+}
+
+.mission-text {
+  position: absolute;
+  margin: 35px;
+  display: flex;
+  gap: 15px;
+  flex-direction: column;
+}
+
+.mission-text span {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.mission-text h4 {
+  font-size: 21px;
+}
+
+.vission-box {
+  margin-top: 33px;
+}
+
+
+.team {
+  margin: 100px 50px 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.team-H {
+  font-size: 35px;
+  color: white;
+  text-align: center;
+}
+
+.team-tag p {
+  color: #ccc;
+  font-size: 18px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.team-member {
+  margin: 50px 0 80px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.mem1 {
+  background-color: #151441;
+  border-radius: 10px;
+  width: 250px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.mem1:hover {
+  border: 2px solid #5d2691;
+  transform: scale(1.1);
+}
+
+.mem1 img {
+  width: 100%;
+  border-radius: 100px;
+  margin-bottom: 20px;
+  opacity: 0.7;
+  filter: grayscale(100%);
+  transition: 0.5s ease;
+}
+
+.mem1:hover img {
+  opacity: 1;
+  filter: grayscale(0%);
+}
+
+.mem1 h4 {
+  color: #c9a110;
+  margin: 2px 0;
 }

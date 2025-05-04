@@ -57,7 +57,7 @@ function About() {
       </div>
 
       <div className="mission">
-        <div className="valueimg">
+        <div className="valueimg" data-aos="fade-right">
           {/* <img src="/assets/corporate-employee-typing-data-financial-report-planning-business-development-with-economy-graphs-female-manger-checking-online-diagrams-analytics-late-night-handheld-shot.jpg" alt="" /> */}
           <div className='value'>
             <span>Our Value</span>
@@ -66,10 +66,50 @@ function About() {
           </div>
         </div>
         <div className='MissViss'>
-          <div className='MissViss1 mission-box'></div>
-          <div className='MissViss1 vission-box'></div>
+          <div className='MissViss1 mission-box' data-aos="fade-down">
+            <div className='mission-text'>
+              <span>Our Mission</span>
+              <h4>Unleash Your Potential in the Digital Realm with Alphagon.</h4>
+              <p>Unleash your potential in the digital realm with Alphagon. Our cutting-edge solutions and expert guidance empower your business to thrive online.</p>
+            </div>
+          </div>
+          <div className='MissViss1 vission-box' data-aos="fade-up">
+            <div className='mission-text'>
+              <span>Our Vision</span>
+              <h4>Elevate Your Digital Presence with Alphagon Expertise.</h4>
+              <p>Elevate your digital presence with Alphagon's expertise. Our innovative solutions and skilled team ensure your brand stands out in the digital landscape.</p>
+            </div>
+          </div>
         </div>
       </div>
+
+
+      <div className="team">
+  <div className="team-H">
+    <h3>MEET THE NEURO-STARS</h3>
+  </div>
+  <div className="team-tag">
+    <p>Crafting Brands That Shine Bright!</p>
+  </div>
+  <div className="team-member">
+    <div className="mem1">
+      <img src="/assets/ceo-removebg-preview.png" alt="CEO" />
+      <h4>Sahrish Anfal</h4>
+      <h5>Founder & CEO</h5>
+    </div>
+    <div className="mem1">
+    <img src="/assets/ceo-removebg-preview.png" alt="CEO" />
+      <h4>Sahrish Anfal</h4>
+      <h5>Founder & CEO</h5>
+    </div>
+    <div className="mem1">
+    <img src="/assets/ceo-removebg-preview.png" alt="CEO" />
+      <h4>Sahrish Anfal</h4>
+      <h5>Founder & CEO</h5>
+    </div>
+  </div>
+</div>
+
 
     </>
   );
