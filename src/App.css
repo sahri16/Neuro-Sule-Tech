@@ -218,7 +218,7 @@ html {
 }
 
 .Client-num {
-  margin-top: 40px;
+  margin-top: 100px;
   height: 40vh;
   width: 100%;
   color: #fff;
@@ -476,7 +476,7 @@ q {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 700px;
+  height: 500px;
   overflow: hidden;
 }
 /* Floating Container */
@@ -620,7 +620,9 @@ q {
   top: 300px;
   transform: translate(-50%, -50%) rotate(0deg);
 }
+ /* --======= Contact form SECTION =====-- */
 .contect-title {
+  margin-top: 100px;
   text-align: center;
   color: rgb(255, 255, 255);
   width: 100%;

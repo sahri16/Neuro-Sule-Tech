@@ -42,8 +42,11 @@ const Navbar = () => {
             <li>
               <NavLink to="/about" activeClassName="active">About Us</NavLink>
             </li>
+            <li>
+              <NavLink to="/services" activeClassName="active">Service</NavLink>
+            </li>
 
-            {/* Dropdown Menu */}
+            {/* Dropdown Menu
             <li className="nav-item dropdown" ref={dropdownRef}>
               <a href="#services" className="nav-link dropdown-toggle"
                 onClick={(e) => {
@@ -59,7 +62,7 @@ const Navbar = () => {
                 <NavLink to="/services/cup-cake" className="dropdown-item" activeClassName="active">Cup Cake</NavLink>
                 <NavLink to="/services/slice-cake" className="dropdown-item" activeClassName="active">Slice Cake</NavLink>
               </div>
-            </li>
+            </li> */}
 
             <li>
               <NavLink to="/portfolio" activeClassName="active">Portfolio</NavLink>

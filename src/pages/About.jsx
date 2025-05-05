@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect } from 'react';
+import TopVideo from '../components/TopVideo';
 import AOS from "aos";
 import "aos/dist/aos.css";
 import '../style/About.css';
@@ -10,22 +11,22 @@ function About() {
       src: "public/Neuro sule tech-04.png",
       alt: "Client 1",
       desc: "Developed a responsive e-commerce platform.",
-      link: "/projects/client1"
+      link: "/projects/client1",
     },
     {
       src: "public/Neuro sule tech-04.png",
       alt: "Client 2",
       desc: "Built a custom WordPress solution.",
-      link: "/projects/client2"
+      link: "/projects/client2",
     },
     {
       src: "public/Neuro sule tech-04.png",
       alt: "Client 3",
       desc: "UI/UX for fintech application.",
-      link: "/projects/client3"
-    }
+      link: "/projects/client3",
+    },
   ];
-
+  
   // Combine twice for seamless looping
   const loopLogos = logos.concat(logos);
 
@@ -41,20 +42,12 @@ function About() {
 
   return (
     <>
-      <div className="about-video">
-        <div className="top">
-          <div className="video-heading">
-            <h2>About Us</h2>
-            <p >Lorem ipsum dolor sit amet consectetur adipisicing.</p>
-          </div>
-          <video autoPlay loop muted playsInline className="background-video">
-            <source src="/assets/159052-818026310_small.mp4" />
-            Your browser does not support the video tag.
-          </video>
-          <div className="overlay"></div>
-        </div>
-      </div>
+      <TopVideo
+      title="About us"
+      subtitle="Empowering innovation through digital solutions"
+    />
 
+   {/* <!--======= story SECTION =====--> */}
       <div className="company-story">
         <div className='cmpyStoryImg' data-aos="fade-right">
           <img src="/assets/company flame.png" alt="" />
@@ -81,9 +74,10 @@ function About() {
         </div>
       </div>
 
+   {/* <!--======= Mission dection =====--> */}
       <div className="mission">
         <div className="valueimg" data-aos="fade-right">
-          {/* <img src="/assets/corporate-employee-typing-data-financial-report-planning-business-development-with-economy-graphs-female-manger-checking-online-diagrams-analytics-late-night-handheld-shot.jpg" alt="" /> */}
+          <img src="/assets/Mission image.png" alt="" />
           <div className='value'>
             <span>Our Value</span>
             <h3>Discover the Glow with Neuro Sule Marketing Magic</h3>
@@ -107,24 +101,26 @@ function About() {
           </div>
         </div>
       </div>
-
-      <div className="trusted-clients">
-        <h2>Trusted by Leading Brands</h2>
-        <div className="scroll-wrapper">
-          <div className="scroll-track">
-            {loopLogos.map((logo, index) => (
-              <div className="client-card" key={index}>
-                <img src={logo.src} alt={logo.alt} />
-                <div className="client-info">
-                  <p>{logo.desc}</p>
-                  <a href={logo.link} className="view-project">View Project</a>
-                </div>
+   {/* <!--======= trust SECTION =====--> */}
+   <div className="trusted-clients">
+      <h2>Trusted by Leading Brands</h2>
+      <div className="scroll-wrapper">
+        <div className="scroll-track">
+          {loopLogos.map((logo, index) => (
+            <div className="client-card" key={index}>
+              <img src={logo.src} alt={logo.alt} />
+              <div className="client-info">
+                <p>{logo.desc}</p>
+                <a href={logo.link} className="view-project">
+                  View Project
+                </a>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
       </div>
-
+    </div>
+   {/* <!--======= Team SECTION =====--> */}
       <div className="team">
         <div className="team-H">
           <h3>MEET THE NEURO-STARS</h3>
@@ -151,6 +147,46 @@ function About() {
         </div>
       </div>
 
+ {/* <!--======= EXPLORE SECTION =====--> */}
+ <section className="explore-section">
+        <div className="explore-float">
+          <div className="thumbnails">
+            <div className="thumbnail">
+              <img src="/assets/1.png" alt="Image 1" />
+            </div>
+            <div className="thumbnail">
+              <img src="/assets/2.png" alt="Image 2" />
+            </div>
+            <div className="thumbnail">
+              <img src="/assets/3.png" alt="Image 3" />
+            </div>
+            <div className="thumbnail">
+              <img src="/assets/4.png" alt="Image 4" />
+            </div>
+          </div>
+          <a href="#" className="explore-circle">
+            EXPLORE OUR COMPANY
+            <svg
+              version="1.1"
+              id="Group_5"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlnsXlink="http://www.w3.org/1999/xlink"
+              x="0px"
+              y="0px"
+              width="140px"
+              height="140px"
+              viewBox="0 0 240 240"
+              style={{ enableBackground: 'new 0 0 240 240' }}
+              xmlSpace="preserve"
+            >
+              <g id="Ellipse_1">
+                <circle className="st10" cx="120" cy="120" r="120"></circle>
+                <circle className="st11" cx="120" cy="120" r="118.5"></circle>
+              </g>
+            </svg>
+          </a>
+        </div>
+      </section>
 
     </>
   );

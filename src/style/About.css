@@ -62,7 +62,7 @@ h3 {
   font-size: 18px;
 }
 
-
+ /* --======= STORY SECTION =====-- */
 .company-story {
   display: flex;
   justify-content: center;
@@ -101,7 +101,7 @@ h3 {
   color: rgb(226, 223, 223);
 }
 
-
+ /* --======= MISSION_SECTION =====-- */
 .mission {
   display: flex;
   margin: 50px;
@@ -111,15 +111,18 @@ h3 {
 .valueimg {
   position: relative;
   display: inline-block;
-  background: #151441;
+  /* background: #151441; */
   height: 85vh;
   width: 70%;
-  border-radius: 20px;
 }
 
-/* .valueimg img{
-  height: 60vh;
-} */
+.valueimg img{
+  border-radius: 20px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  display: block;
+}
 .value {
   position: absolute;
   padding-left: 40px;
@@ -183,8 +186,9 @@ h3 {
   margin-top: 33px;
 }
 
+ /* --======= CLIENT SECTION =====-- */
 .trusted-clients {
-  margin: 150px 50px 0px 50px;
+  margin: 150px 50px 0;
   padding: 60px 150px;
   text-align: center;
   color: white;
@@ -205,7 +209,7 @@ h3 {
 .scroll-track {
   display: flex;
   width: max-content;
-  animation: scroll-left 50s linear infinite;
+  animation: scroll-left 20s linear infinite; /* Reduced duration for smoother testing */
 }
 
 .client-card {
@@ -252,7 +256,7 @@ h3 {
 
 .view-project {
   display: inline-block;
-  margin: 8px 20px 0px 20px;
+  margin: 8px 20px 0;
   background-color: #5d2691;
   padding: 5px 10px;
   border-radius: 5px;
@@ -264,16 +268,16 @@ h3 {
 /* Animation keyframes */
 @keyframes scroll-left {
   0% {
-    transform: translateX(0%);
+    transform: translateX(0);
   }
-
   100% {
-    transform: translateX(-50%);
+    transform: translateX(-50%); /* Moves exactly half the track (since logos are duplicated) */
   }
 }
 
+ /* --======= Team SECTION =====-- */
 .team {
-  margin: 100px 50px 50px;
+  margin: 100px 50px -50px 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
