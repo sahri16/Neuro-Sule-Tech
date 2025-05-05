@@ -58,3 +58,13 @@
     font-size: 18px;
   }
   
+
+  /* Further adjustments for very small screens */
+@media screen and (max-width: 480px) {
+  .top{
+    height: 50vh;
+  }
+  .video-heading{
+    width: 70%;
+  }
+}
