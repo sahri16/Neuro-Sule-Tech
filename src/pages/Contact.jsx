@@ -6,6 +6,7 @@ import "aos/dist/aos.css";
 import '../style/Contact.css';
 
 
+
 function Contact() {
   // Initialize AOS animations
   useEffect(() => {
@@ -28,6 +29,7 @@ function Contact() {
 
   return (
     <>
+ 
       <div>
         <TopVideo
           title="Contact Us"

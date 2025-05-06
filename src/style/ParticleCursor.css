@@ -1,0 +1,40 @@
+#particleCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none; /* Ensures canvas doesn't interfere with mouse events */
+    z-index: 9999;
+  }
+  
+  .custom-cursor {
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    background: radial-gradient(circle, rgba(241, 140, 228, 0.8), rgba(241, 140, 228, 0.2));
+    border-radius: 50%;
+    pointer-events: none; /* Prevents cursor from interfering with mouse events */
+    z-index: 10000;
+    transform: translate(-50%, -50%); /* Centers the cursor div on the mouse position */
+    filter: drop-shadow(0 0 5px rgba(241, 140, 228, 0.8)) blur(2px); /* Glowing filter effect */
+    animation: pulse 1.5s infinite ease-in-out;
+  }
+  
+  /* Hide default cursor on canvas and custom cursor area */
+  body {
+    cursor: none !important;
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: translate(-50%, -50%) scale(1);
+      opacity: 0.8;
+    }
+    50% {
+      transform: translate(-50%, -50%) scale(1.2);
+      opacity: 0.5;
+    }
+    100% {
+      transform: translate(-50%, -50%) scale(1);
+      opacity: 0.8;
+    }
+  }
