@@ -104,11 +104,11 @@
     text-align: center;
     text-decoration: none;
     transition: 0.3s;
-    background-image: linear-gradient(45deg, #5d2691, #c9a110);
+    background-image: linear-gradient(45deg, #5d2691, #c9a110) !important;
     color: white;
   }
   .contect-btn a:hover {
-    background: #5d2691;
+    background: #5d2691 !important;
     box-shadow: 0px 0px 10px 4px rgba(213, 184, 241, 0.61);
   }
   /* Navbar Toggler */

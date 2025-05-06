@@ -204,7 +204,7 @@ html {
 .company-text p {
   font-size: 18px;
   line-height: 1.5rem;
-  color: rgb(226, 223, 223);
+   color: #aba6be;
 }
 
 .company-quote {
@@ -536,7 +536,7 @@ q {
 .contect-right p {
   font-size: 15px;
   line-height: 1.5rem;
-  color: rgb(226, 223, 223);
+   color: #aba6be;
 }
 .contect-left {
   padding-top: 20px;
@@ -558,7 +558,7 @@ q {
   gap: 10px;
 }
 .contact-text p {
-  color: rgb(226, 223, 223);
+   color: #aba6be;
 }
 .contect-data {
   padding: 35px 80px;
@@ -780,7 +780,6 @@ q {
     padding: 10px 20px;
   }
  
-  
   .company-quote-box {
     height: 20vh;
   }

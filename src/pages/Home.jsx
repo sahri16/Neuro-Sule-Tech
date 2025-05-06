@@ -14,7 +14,7 @@ function Home() {
   useEffect(() => {
     AOS.init({
       duration: 1000,  // Animation duration (1s)
-      once: false,       // Run only once
+      once: false,     
     });
     AOS.refresh(); // Refresh AOS to detect new elements
   }, []);
@@ -100,7 +100,9 @@ function Home() {
       </section>
 
   {/*------------------- Service------------ */}
-  <ServiceSection />
+  <ServiceSection 
+   Service="Our Service's"
+  />
       
       {/*------------------ Client-num ------------*/}
      <ClientSection />
@@ -236,6 +238,7 @@ function Home() {
         <h6>You got questions?</h6>
         <h3>We have got the Answers</h3>
       </div>
+      
       {/* Contect form */}
       <section className='contect-section'>
         <div className="contect-right" data-aos="fade-right">

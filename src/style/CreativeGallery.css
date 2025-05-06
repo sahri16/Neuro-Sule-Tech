@@ -1,0 +1,161 @@
+:root {
+    --primary-White: white;
+    --primary-paragraph: #aba6be;
+    --primary-span: #c9a110;
+    --image-transition-duration: 0.5s; /* Define custom transition duration for image scrolling */
+}
+
+.creative-section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    color: var(--primary-White);
+    margin-bottom: 50px;
+}
+
+.section-portfolio {
+    color: var(--primary-span);
+    font-style: italic;
+    margin-bottom: 30px;
+}
+
+/* AOS fade-up animation for elements like title, portfolio span, and images */
+[data-aos="zoom-in"] {
+    opacity: 0;
+    transform: translateY(20px); /* Slight upward shift for fade effect */
+    /* Refined transition properties for fade-up effect on scrolling */
+    transition-duration: var(--image-transition-duration);
+    transition-property: opacity, transform; /* Focus on opacity and transform for fade-up */
+    transition-timing-function: ease-in-out; /* Smooth easing for scrolling effect */
+}
+
+/* AOS class added when element is in viewport */
+[data-aos="fade-up"].aos-animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns for desktop */
+    gap: 10px;
+    max-width: 1200px;
+    margin: 0 auto;
+    grid-auto-rows: minmax(200px, auto);
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    aspect-ratio: 1 / 1;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+.overlay-gallery {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 10px;
+    transform: translateY(100%);
+    transition: transform 0.3s ease; /* Retain only transform for hover effect */
+    border-radius: 0px !important;
+}
+
+.gallery-item:hover .overlay-gallery {
+    transform: translateY(0);
+}
+
+.overlay-gallery p {
+    text-align: center;
+    font-size: 1rem;
+}
+
+/* Modal Styles */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-image {
+    max-width: 90%;
+    max-height: 90vh;
+    object-fit: contain; /* Preserve original aspect ratio */
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.prev {
+    left: 20px;
+}
+
+.next {
+    right: 20px;
+}
+
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 2rem;
+    }
+    .gallery {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for tablet/mobile */
+        gap: 8px;
+        grid-auto-rows: minmax(150px, auto);
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery {
+        grid-template-columns: 1fr; /* Single column for small screens */
+        gap: 5px;
+        grid-auto-rows: minmax(120px, auto);
+    }
+}

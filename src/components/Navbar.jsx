@@ -74,7 +74,7 @@ const Navbar = () => {
 
           {/* Contact Button */}
           <div className="nav-btn">
-            <div className="contect-btn"><NavLink to="/contact" activeClassName="active">Contact Us</NavLink></div>
+            <div className="contect-btn"><NavLink to="/contact">Let's Talk</NavLink></div>
           </div>
         </div>
       </div>

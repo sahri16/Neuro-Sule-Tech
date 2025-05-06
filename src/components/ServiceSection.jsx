@@ -2,11 +2,12 @@
 import React from 'react';
 import '../style/ServiceSection.css';
 
-const ServiceSection = () => {
+const ServiceSection = ({ Service,Service_tegline}) => {
   return (
     <section className='Service'>
-      <div className="service-box">
-        <h3 data-aos="zoom-in-up">Our Service's</h3>
+      <div className="service-box service-section global-service-box">
+        <span data-aos="zoom-in-up">{Service_tegline}</span>
+        <h3 data-aos="zoom-in-up">{Service}</h3>
 
         <div className="service-list1" data-aos="fade-up" data-aos-duration="1500">
           <div className="service-item1" data-aos="fade-up">
