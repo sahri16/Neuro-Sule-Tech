@@ -4,7 +4,7 @@ import ServiceSection from '../components/ServiceSection';
 import ClientSection from '../components/ClientSection';
 import AOS from "aos";
 import "aos/dist/aos.css";
-import '../style/Service.css';
+import '../style/Contact.css';
 
 
 function Contact() {
@@ -33,9 +33,19 @@ function Contact() {
         <div className="contect-right" data-aos="fade-right">
           <h6>Get in Touch</h6>
           <h2>Let’s Elevate Your Brand with Innovation!</h2>
-          <p>At Neura Sule Tech, we believe every business has the potential to shine in the digital world. Whether you're a startup looking for a strong online presence or an established brand ready to scale, we are here to turn your vision into reality.
-            Our team of expert developers, designers, and digital strategists work together to craft innovative solutions, ensuring your brand stands out in a competitive market. Let’s build something extraordinary—because your success is our mission!</p>
+          <h3>Come for New innovation.</h3>
+          <h2>Let's Talk</h2>
+          <div className='Contact_info'>
+            <div>
+              
+            </div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+          </div>
+          
         </div>
+
         <div className="contect-left" data-aos="fade-left">
           <form action="https://api.web3forms.com/submit" method="POST">
             <div className="contact-text">
