@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from 'react';
 import ServiceSection  from '../components/ServiceSection'; 
 import ClientSection from '../components/ClientSection';
+import { useLoading } from "../components/LoadingProvider";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import '../App.css';
@@ -9,6 +10,17 @@ function Home() {
   const [isNavOpen, setIsNavOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const dropdownRef = useRef(null);
+
+  // looded indicater
+  const { setLoading } = useLoading();
+
+  useEffect(() => {
+    setLoading(true);
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 1000); // Replace with actual loading logic
+    return () => clearTimeout(timer);
+  }, [setLoading]);
 
   // Initialize AOS animations
   useEffect(() => {

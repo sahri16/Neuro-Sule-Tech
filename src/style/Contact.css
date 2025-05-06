@@ -1,8 +1,37 @@
 
-
-
+:root {
+    --primary-White: white;
+    --primary-paragraph: #aba6be;
+    --primary-span: #c9a110;
+    --primary-purpple: #5d2691;
+}
+.contect-right {
+    padding-top: 10px !important;
+    gap: 10px !important;
+}
+.contect-right, .contact-info{
+    color: var(--primary-purpple) !important;
+}
+.Contact_divider{
+    width: 90%;
+    height: 1px;
+    background-color: var(--primary-paragraph);
+    margin: 10px 0px;
+    z-index: 8;
+}
 .Contact_info{
     display: grid;
     grid-template-columns: 1fr 1fr;
     /* place-items: center; */
+    gap: 20px;
 }
+.Contact-icon i {
+    background-color: var(--primary-span);
+    color:  var(--primary-White);
+    border-radius: 50px;
+    padding: 8px;
+    margin: 5px;
+    font-size: 24px;
+    transition: 0.3s;
+    cursor: pointer;
+  }

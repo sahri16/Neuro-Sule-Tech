@@ -1,7 +1,6 @@
 import { useState, useRef, useEffect } from 'react';
 import TopVideo from '../components/TopVideo';
-import ServiceSection from '../components/ServiceSection';
-import ClientSection from '../components/ClientSection';
+import { useLoading } from "../components/LoadingProvider";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import '../style/Contact.css';
@@ -16,7 +15,15 @@ function Contact() {
     });
     AOS.refresh();
   }, []);
+  const { setLoading } = useLoading();
 
+  useEffect(() => {
+    setLoading(true);
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 1000); // Replace with actual loading logic
+    return () => clearTimeout(timer);
+  }, [setLoading]);
 
 
   return (
@@ -30,18 +37,45 @@ function Contact() {
 
       {/* Contect form */}
       <section className='contect-section'>
-        <div className="contect-right" data-aos="fade-right">
+        <div className="contect-right " data-aos="fade-right">
           <h6>Get in Touch</h6>
           <h2>Let’s Elevate Your Brand with Innovation!</h2>
           <h3>Come for New innovation.</h3>
-          <h2>Let's Talk</h2>
+          <h2 className='contact-info'>Let's Talk</h2>
+          <div className="Contact_divider"></div>
           <div className='Contact_info'>
             <div>
-              
+              <div className='Contact-icon'><i class='bx bxs-location-plus Contact-icon'></i></div>
+              <div>
+                <div><h4>Head Office</h4></div>
+                <div><p>R-1042, Wapda Town Phase 2, Northern Bypass, .
+                Multan, Pakistan.</p></div>
+              </div>
             </div>
-            <div>2</div>
-            <div>3</div>
-            <div>4</div>
+            <div>
+              <div className='Contact-icon'><i class='bx bxs-phone-call Contact-icon' ></i></div>
+              <div>
+                <div><h4>Head Office</h4></div>
+                <div><p>R-1042, Wapda Town Phase 2, Northern Bypass, .
+                Multan, Pakistan.</p></div>
+              </div>
+            </div>
+            <div>
+              <div className='Contact-icon'><i class='bx bxs-envelope Contact-icon' ></i></div>
+              <div>
+                <div><h4>Head Office</h4></div>
+                <div><p>R-1042, Wapda Town Phase 2, Northern Bypass, .
+                Multan, Pakistan.</p></div>
+              </div>
+            </div>
+            <div>
+              <div className='Contact-icon'><i class='bx bxs-time Contact-icon' ></i></div>
+              <div>
+                <div><h4>Head Office</h4></div>
+                <div><p>R-1042, Wapda Town Phase 2, Northern Bypass, .
+                Multan, Pakistan.</p></div>
+              </div>
+            </div>
           </div>
           
         </div>

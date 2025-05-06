@@ -2,12 +2,25 @@ import { useState, useRef, useEffect } from 'react';
 import TopVideo from '../components/TopVideo';
 import ServiceSection from '../components/ServiceSection';
 import ClientSection from '../components/ClientSection';
+import { useLoading } from "../components/LoadingProvider";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import '../style/Service.css';
 
 
 function Services() {
+
+  // looded indicater
+  const { setLoading } = useLoading();
+
+  useEffect(() => {
+    setLoading(true);
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 1000); // Replace with actual loading logic
+    return () => clearTimeout(timer);
+  }, [setLoading]);
+
   // Initialize AOS animations
   useEffect(() => {
     AOS.init({

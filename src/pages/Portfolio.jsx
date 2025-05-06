@@ -1,11 +1,22 @@
 import { useState, useRef, useEffect } from 'react';
 import TopVideo from '../components/TopVideo';
 import CreativeGallery from '../components/CreativeGallery';
+import { useLoading } from "../components/LoadingProvider";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import '../style/Portfolio.css';
 
 function Portfolio() {
+// looded indicater
+  const { setLoading } = useLoading();
+
+  useEffect(() => {
+    setLoading(true);
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 1000); // Replace with actual loading logic
+    return () => clearTimeout(timer);
+  }, [setLoading]);
 
   // Initialize AOS animations
   useEffect(() => {

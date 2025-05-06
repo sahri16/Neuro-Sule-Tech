@@ -1,31 +1,45 @@
 import { useState, useRef, useEffect } from 'react';
 import TopVideo from '../components/TopVideo';
+import { useLoading } from "../components/LoadingProvider";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import '../style/About.css';
 
 
 function About() {
+  // looded indicater
+  const { setLoading } = useLoading();
+
+  useEffect(() => {
+    setLoading(true);
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 1000); // Replace with actual loading logic
+    return () => clearTimeout(timer);
+  }, [setLoading]);
+
+
   const logos = [
     {
-      src: "public/Neuro sule tech-04.png",
+      src: "public/assets/portfolio sahrish logo.svg",
       alt: "Client 1",
       desc: "Developed a responsive e-commerce platform.",
-      link: "/projects/client1",
+      link: "https://sahri16.github.io/sahrish-anfal-portfolio/",
     },
     {
-      src: "public/Neuro sule tech-04.png",
+      src: "public/assets/logo-Borcelle.svg",
       alt: "Client 2",
       desc: "Built a custom WordPress solution.",
-      link: "/projects/client2",
+      link: "https://sahri16.github.io/Borcelle-Cakebake/",
     },
     {
       src: "public/Neuro sule tech-04.png",
       alt: "Client 3",
       desc: "UI/UX for fintech application.",
-      link: "/projects/client3",
+      link: "https://sahri16.github.io/Borcelle-Cakebake/",
     },
   ];
+  
   
   // Combine twice for seamless looping
   const loopLogos = logos.concat(logos);
@@ -103,23 +117,23 @@ function About() {
       </div>
    {/* <!--======= trust SECTION =====--> */}
    <div className="trusted-clients">
-      <h2>Trusted by Leading Brands</h2>
-      <div className="scroll-wrapper">
-        <div className="scroll-track">
-          {loopLogos.map((logo, index) => (
-            <div className="client-card" key={index}>
-              <img src={logo.src} alt={logo.alt} />
-              <div className="client-info">
-                <p>{logo.desc}</p>
-                <a href={logo.link} className="view-project">
-                  View Project
-                </a>
+        <h2>Trusted by Leading Brands</h2>
+        <div className="scroll-wrapper">
+          <div className="scroll-track">
+            {loopLogos.map((logo, index) => (
+              <div className="client-card" key={index}>
+                <img src={logo.src} alt={logo.alt} />
+                <div className="client-info">
+                  <p>{logo.desc}</p>
+                  <a href={logo.link} className="view-project" target="_blank" rel="noopener noreferrer">
+                    View Project
+                  </a>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
-    </div>
    {/* <!--======= Team SECTION =====--> */}
       <div className="team">
         <div className="team-H">
