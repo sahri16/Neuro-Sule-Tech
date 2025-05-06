@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from 'react';
 import TopVideo from '../components/TopVideo';
-import ServiceSection  from '../components/ServiceSection'; 
+import ServiceSection from '../components/ServiceSection';
+import ClientSection from '../components/ClientSection';
 import AOS from "aos";
 import "aos/dist/aos.css";
 import '../style/Service.css';
@@ -28,8 +29,8 @@ function Services() {
       </div>
       {/*------------------- Service------------ */}
       <ServiceSection />
-
-
+      {/*------------------- Client------------ */}
+      <ClientSection />
     </>
   );
 }

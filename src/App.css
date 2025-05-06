@@ -129,138 +129,8 @@ html {
   box-shadow: 0px 0px 10px 2px rgba(213, 184, 241, 0.61);
   border: none;
 }
-/* --------------Service-------------------- */
-.Service {
-  margin-top: 50px;
-  /* height: 170vh; */
-  width: 100%;
-}
-.service-box {
-  margin: 0px 100px;
-}
-.service-box h3 {
-  color: #fff;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  font-size: 40px;
-  text-align: center;
-}
-.service-list1 {
-  margin: 20px 0px;
-  gap: 45px;
-  display: flex;
-  justify-content: center;
-}
+/* ----------------COMPANY SECTION---------------- */
 
-.service-item1 {
-  border: 2px solid #5d2691;
-  /* height: 50vh; */
-  width: 30%;
-  border-radius: 20px;
-}
-.service-card {
-  transition: transform 0.3s ease-in-out;
-}
-.service-card:hover {
-  transform: scale(1.03);
-}
-.service-card {
-  position: relative;
-  text-align: center;
-  display: flex;
-  margin: 15px 15px;
-  padding: 15px 10px;
-  /* gap: 13px; */
-  background-color: #151441;
-  border-radius: 10px;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-  overflow: hidden;
-}
-
-.service-card::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url("/assets/Pattern-PNG-Image-Background.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  opacity: 0.1;
-  z-index: 0;
-}
-.service-card h4,
-.service-card p,
-.service-card img {
-  position: relative;
-  z-index: 1;
-}
-.service-card img {
-  height: 155px;
-}
-.service-card h4 {
-  font-size: 20px;
-  font-weight: bolder;
-  color: white;
-}
-.service-card p {
-  color: rgb(226, 223, 223);
-  font-family: "Arial Narrow", Arial, sans-serif;
-  font-size: 20px;
-  line-height: 1.6rem;
-}
-.service-item1:hover {
-  border: 2px solid #c9a110;
-  box-shadow: 0px 0px 15px 0px rgb(201, 161, 16);
-}
-
-.Client-num {
-  margin-top: 100px;
-  height: 40vh;
-  width: 100%;
-  color: #fff;
-}
-.Client-num h3 {
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  font-size: 40px;
-  text-align: center;
-}
-.client-bar-box {
-  margin-top: 20px;
-  width: 100%;
-  background-image: linear-gradient(45deg, #5d2691, #c9a110);
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  padding: 10px 0px;
-}
-.box1 {
-  display: flex;
-  gap: 15px;
-}
-.box1 h5 {
-  font-size: 50px;
-  display: flex;
-  /* justify-content: center; */
-  align-items: center;
-    margin: 0px 0px 0px 0px;
-}
-.box1 p {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 20px;
-  line-height: 1.6rem;
-  width: 170px;
-  /* background: #000; */
-}
-.vertival-line {
-  border-right: 1px solid #151441;
-  height: 15vh;
-}
 .copmany-intro {
   display: flex;
   padding: 0px 90px;
@@ -725,7 +595,7 @@ q {
   border: 1px solid #5d2691;
 }
 .paddText {
-  caret-color: #c9a110; /* Cursor ka color red hoga */
+  caret-color: #c9a110;
   font-family: Arial, Helvetica, sans-serif;
 }
 .paddText:focus {
@@ -801,15 +671,7 @@ q {
     width: 40%;
     text-align: center;
   }
-  .Client-num {
-    margin-top: 100px;
-  }
-  .client-bar-box {
-    flex-direction: column;
-  }
-  .Client-num h3 {
-    font-size: 30px;
-  }
+ 
   .box1 {
     flex-direction: column;
     align-items: center;
@@ -826,19 +688,7 @@ q {
     width: 20vh;
     height: 0;
   }
-  .service-list1 {
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 35px;
-    margin: 30px 0px;
-  }
-  .service-item1 {
-    width: 100%;
-  }
-  .service-box {
-    margin: 0px 50px;
-  }
+ 
   .copmany-intro {
     padding: 0px 0px;
     margin-top: 400px;
@@ -930,25 +780,7 @@ q {
     padding: 10px 20px;
   }
  
-  .service-card {
-    gap: 10px;
-  }
-  .service-box {
-    margin: 0px 40px;
-  }
-  .service-card img {
-    height: 100px;
-  }
-  .service-card h4 {
-    font-size: 17px;
-  }
-  .service-card p {
-    font-size: 14px;
-    line-height: 1rem;
-  }
-  .Client-num {
-    margin-top: 100px;
-  }
+  
   .company-quote-box {
     height: 20vh;
   }
