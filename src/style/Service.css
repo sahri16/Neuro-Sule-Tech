@@ -78,11 +78,8 @@
 .service2 {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    /* Two equal-width columns */
-    place-items: center;
-    /* Center content in each grid cell */
     gap: 100px;
-    margin: 30px 50px;
+    margin: 100px 50px;
     padding: 2rem;
     border-radius: 0.5rem;
 }

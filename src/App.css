@@ -142,7 +142,7 @@ html {
 .copmany-intro {
   display: flex;
   padding: 0px 90px;
-  margin-top: 80px;
+  margin-top: 100px;
 }
 
 .company-box {
@@ -565,7 +565,7 @@ q {
 
 .contect-section {
   /* height: 90vh; */
-  margin: 0px 80px;
+  margin: 100px 80px;
   color: #fff;
   gap: 80px;
   display: flex;
@@ -709,7 +709,6 @@ q {
 @media (max-width: 768px) {
   .content {
     padding: 0px 0px;
-    /* padding: 0px 70px; */
     width: 100%;
     margin-top: 250px;
     height: auto;
@@ -842,6 +841,7 @@ q {
   }
 
   .contect-section {
+    margin: 100px 30px !important;
     flex-direction: column;
   }
 
@@ -869,8 +869,6 @@ q {
 @media screen and (max-width: 480px) {
   .content {
     justify-content: center;
-    /* margin-top: 140px; */
-    /* padding: 0px 30px; */
   }
 
   .hero_title {
@@ -926,7 +924,8 @@ q {
   }
 
   .explore-section {
-    height: 550px;
+    /* height: 550px; */
+    margin: 0px 0px 0px 0px;
   }
 
   .explore-circle {
@@ -950,11 +949,11 @@ q {
   }
 
   .contect-title {
-    height: 10vh;
+    margin-top: 0px;
   }
 
   .contect-left {
-    padding: 30px 20px;
+    padding: 30px 0px;
   }
 
   .contact-text h2 {

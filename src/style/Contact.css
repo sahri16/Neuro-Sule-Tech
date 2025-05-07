@@ -4,6 +4,10 @@
     --primary-paragraph: #aba6be;
     --primary-span: #c9a110;
     --primary-purpple: #5d2691;
+    --primary-navbar: #151441;
+}
+.contact-section{
+    margin: 100px 30px !important;
 }
 .contect-right {
     padding-top: 10px !important;
@@ -35,3 +39,8 @@
     transition: 0.3s;
     cursor: pointer;
   }
+
+  @media (max-width: 768px) {
+    
+  }
+  
