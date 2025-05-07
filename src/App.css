@@ -961,39 +961,4 @@ q {
     margin: 0px;
   }
 }
-
-/* Responsive Adjustments */
-/* @media (max-width: 1024px) {
-    .explore-section {
-      height: 430px;
-    }
   
-    .thumbnail {
-      max-width: 100%;
-    }
-  
-    .explore-float:hover .thumbnail:nth-child(1) {
-      left: 10%;
-      top: 300px;
-    }
-  
-    .explore-float:hover .thumbnail:nth-child(2) {
-      left: 35%;
-      top: 300px;
-    }
-  
-    .explore-float:hover .thumbnail:nth-child(3) {
-      left: 60%;
-      top: 300px;
-    }
-  
-    .explore-float:hover .thumbnail:nth-child(4) {
-      left: 85%;
-      top: 300px;
-    }
-  
-    .explore-float:hover .explore-circle {
-      left: 50%;
-      top: 300px;
-    }
-  } */
