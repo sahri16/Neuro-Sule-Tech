@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from 'react';
-import ServiceSection  from '../components/ServiceSection'; 
+import ServiceSection from '../components/ServiceSection';
 import ClientSection from '../components/ClientSection';
 import { useLoading } from "../components/LoadingProvider";
 import AOS from "aos";
@@ -26,11 +26,13 @@ function Home() {
   useEffect(() => {
     AOS.init({
       duration: 1000,  // Animation duration (1s)
-      once: false,     
+      once: false,
     });
     AOS.refresh(); // Refresh AOS to detect new elements
   }, []);
 
+
+  //testnomial
   const [slideIndex, setSlideIndex] = useState(0);
 
   const testimonials = [
@@ -83,11 +85,40 @@ function Home() {
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
+  //typer effect
+  const fullText = "Ready to transform your challenges into innovative solutions?";
+  const [displayedText, setDisplayedText] = useState("");
+  const [index, setIndex] = useState(0);
+  const [isTyping, setIsTyping] = useState(true);
+
+  useEffect(() => {
+    let typingInterval;
+
+    if (isTyping) {
+      typingInterval = setInterval(() => {
+        if (index < fullText.length) {
+          setDisplayedText((prev) => prev + fullText[index]);
+          setIndex((prev) => prev + 1);
+        } else {
+          // Pause after typing completes
+          setIsTyping(false);
+          setTimeout(() => {
+            setDisplayedText("");
+            setIndex(0);
+            setIsTyping(true);
+          }, 2000); // 2-second pause before restarting
+        }
+      }, 100); // Typing speed: 100ms per character
+    }
+
+    return () => clearInterval(typingInterval); // Cleanup on unmount
+  }, [index, isTyping, fullText]);
+
   return (
     <div className="all-content">
       {/* Hero Section */}
       <section className="heroSection">
-      {/* <canvas id="particleCanvas"></canvas> */}
+        {/* <canvas id="particleCanvas"></canvas> */}
         <video autoPlay loop muted playsInline className="background-video">
           <source src="/assets/1992-153555258_small.mp4" />
           Your browser does not support the video tag.
@@ -100,7 +131,10 @@ function Home() {
               <h3>Unlocking the Future with Purposeful Innovation, Bridging Ideas to Reality</h3>
             </div>
             <div data-aos="fade-up">
-              <span className="typing">Ready to transform your challenges into innovative solutions?</span>
+              <div className="typing-container">
+                <span className="typing">{displayedText}</span>
+                <span className={`cursor ${isTyping ? "blinking" : ""}`}></span>
+              </div>
             </div>
           </div>
 
@@ -111,13 +145,13 @@ function Home() {
         </div>
       </section>
 
-  {/*------------------- Service------------ */}
-  <ServiceSection 
-   Service="Our Service's"
-  />
-      
+      {/*------------------- Service------------ */}
+      <ServiceSection
+        Service="Our Service's"
+      />
+
       {/*------------------ Client-num ------------*/}
-     <ClientSection />
+      <ClientSection />
 
       {/*------------------ Company-intro ------------*/}
       <section className='copmany-intro'>
@@ -177,10 +211,10 @@ function Home() {
           ))}
         </div>
       </section>
- {/* <!--======= Mission dection =====--> */}
- <div className="mission">
+      {/* <!--======= Mission dection =====--> */}
+      <div className="mission">
         <div className="valueimg" data-aos="fade-right">
-        <img src="/assets/Mission image.png" alt="" />
+          <img src="/assets/Mission image.png" alt="" />
           <div className='value'>
             <span>Our Value</span>
             <h3>Discover the Glow with Neuro Sule Marketing Magic</h3>
@@ -250,7 +284,7 @@ function Home() {
         <h6>You got questions?</h6>
         <h3>We have got the Answers</h3>
       </div>
-      
+
       {/* Contect form */}
       <section className='contect-section'>
         <div className="contect-right" data-aos="fade-right">
