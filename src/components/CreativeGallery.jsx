@@ -1,55 +1,93 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react'; // FIX: Added useRef import
 import '../style/CreativeGallery.css';
 
-const CreativeGallery = ({ images }) => {
-  const [selectedImage, setSelectedImage] = useState(null);
+const CreativeGallery = ({ creativeImages, uiuxItems }) => {
+  const [selectedItem, setSelectedItem] = useState(null);
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [activeGallery, setActiveGallery] = useState(null);
+  const videoRefs = useRef([]);
 
   useEffect(() => {
     const handleKeyDown = (e) => {
-      if (selectedImage) {
+      if (selectedItem) {
         if (e.key === 'ArrowLeft') handlePrev();
         if (e.key === 'ArrowRight') handleNext();
-        if (e.key === 'Escape') setSelectedImage(null);
+        if (e.key === 'Escape') setSelectedItem(null);
       }
     };
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [selectedImage]);
+  }, [selectedItem]);
 
-  const handleImageClick = (index) => {
-    setSelectedImage(images[index].src);
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          const video = entry.target;
+          if (entry.isIntersecting) {
+            video.play().catch((error) => console.error('Video play failed:', error));
+          } else {
+            video.pause();
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
+
+    videoRefs.current.forEach((video) => {
+      if (video) observer.observe(video);
+    });
+
+    return () => {
+      videoRefs.current.forEach((video) => {
+        if (video) observer.unobserve(video);
+      });
+    };
+  }, [uiuxItems]);
+
+  const handleItemClick = (index, galleryType) => {
+    const items = galleryType === 'creative' ? creativeImages : uiuxItems;
+    setSelectedItem(items[index]);
     setCurrentIndex(index);
+    setActiveGallery(galleryType);
   };
 
   const handleNext = () => {
-    const nextIndex = (currentIndex + 1) % images.length;
-    setSelectedImage(images[nextIndex].src);
+    const items = activeGallery === 'creative' ? creativeImages : uiuxItems;
+    const nextIndex = (currentIndex + 1) % items.length;
+    setSelectedItem(items[nextIndex]);
     setCurrentIndex(nextIndex);
   };
 
   const handlePrev = () => {
-    const prevIndex = (currentIndex - 1 + images.length) % images.length;
-    setSelectedImage(images[prevIndex].src);
+    const items = activeGallery === 'creative' ? creativeImages : uiuxItems;
+    const prevIndex = (currentIndex - 1 + items.length) % items.length;
+    setSelectedItem(items[prevIndex]);
     setCurrentIndex(prevIndex);
   };
 
   const handleClose = () => {
-    setSelectedImage(null);
+    setSelectedItem(null);
+    setActiveGallery(null);
   };
 
   return (
     <section className="creative-section">
+      {/* Creative Designs Gallery */}
       <span className="section-portfolio" data-aos="fade-up">CN Portfolio</span>
       <h3 className="section-title" data-aos="fade-up">Creative Designs</h3>
       <div className="gallery">
-        {images.map((image, index) => (
-          <div key={index} className="gallery-item" onClick={() => handleImageClick(index)}>
+        {creativeImages.map((image, index) => (
+          <div
+            key={`creative-${index}`}
+            className="gallery-item"
+            onClick={() => handleItemClick(index, 'creative')}
+          >
             <img
               src={image.src}
               alt={image.alt}
               data-aos="zoom-in"
-              data-aos-delay={index * 100} /* Staggered delay for each image */
+              data-aos-delay={index * 100}
             />
             <div className="overlay-gallery">
               <p>{image.overlayText}</p>
@@ -57,12 +95,85 @@ const CreativeGallery = ({ images }) => {
           </div>
         ))}
       </div>
-      {selectedImage && (
+
+      {/* UI/UX Designs Gallery (Images and Videos) */}
+      <h3 className="section-title title2" data-aos="fade-up">UI/UX Designs</h3>
+      <div className="gallery">
+        {uiuxItems.map((item, index) => (
+          <div
+            key={`uiux-${index}`}
+            className="gallery-item"
+            onClick={() => handleItemClick(index, 'uiux')}
+          >
+            {item.type === 'video' ? (
+              <video
+                ref={(el) => (videoRefs.current[index] = el)}
+                className="gallery-video"
+                autoPlay
+                muted
+                loop
+                playsInline
+                data-aos="zoom-in"
+                data-aos-delay={index * 100}
+              >
+                <source src={item.src} type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            ) : (
+              <img
+                src={item.src}
+                alt={item.alt}
+                data-aos="zoom-in"
+                data-aos-delay={index * 100}
+              />
+            )}
+            <div className="overlay-gallery">
+              <p>{item.overlayText}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      {/* Single Modal for Images and Videos */}
+      {selectedItem && (
         <div className="modal" onClick={handleClose}>
           <span className="close">×</span>
-          <img src={selectedImage} alt="Full view" className="modal-image" />
-          <button className="prev" onClick={(e) => { e.stopPropagation(); handlePrev(); }}>❮</button>
-          <button className="next" onClick={(e) => { e.stopPropagation(); handleNext(); }}>❯</button>
+          {selectedItem.type === 'video' ? (
+            <video
+              src={selectedItem.src}
+              className="modal-video"
+              controls
+              autoPlay
+              // FIX: Removed poster attribute, as uiuxItems videos don't include posters
+            >
+              <source src={selectedItem.src} type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          ) : (
+            <img
+              src={selectedItem.src}
+              alt={selectedItem.alt}
+              className="modal-image"
+            />
+          )}
+          <button
+            className="prev"
+            onClick={(e) => {
+              e.stopPropagation();
+              handlePrev();
+            }}
+          >
+            ❮
+          </button>
+          <button
+            className="next"
+            onClick={(e) => {
+              e.stopPropagation();
+              handleNext();
+            }}
+          >
+            ❯
+          </button>
         </div>
       )}
     </section>
