@@ -1,3 +1,10 @@
+:root {
+  --primary-White: white; 
+  --primary-paragraph: #cdcdcd;
+  --primary-span: #c9a110;
+}
+
+
 body,
 html {
   margin: 0;
@@ -772,7 +779,7 @@ q {
 
   .copmany-intro {
     padding: 0px 0px;
-    margin-top: 400px;
+    margin-top: 150px;
   }
 
   .company-box {
@@ -869,18 +876,24 @@ q {
 @media screen and (max-width: 480px) {
   .content {
     justify-content: center;
+            margin-top: 120px;
+
   }
 
   .hero_title {
-    font-size: 34px;
-    line-height: 2.5rem;
+   font-size: 25px;
+        line-height: 2rem;
   }
-
+.hero-right{
+  margin-top: 10px;
+}
   .hero-btn1,
   .hero-btn2 {
     padding: 10px 20px;
   }
-
+.copmany-intro{
+          margin-top: 250px;
+}
   .company-quote-box {
     height: 20vh;
   }
@@ -909,8 +922,14 @@ q {
   .prev,
   .next {
     padding: 5px;
+    top: 60%;
   }
-
+.prev{
+  left: 0px;
+}
+.next{
+  right: 0px;
+}
   q {
     font-size: 10px;
   }
@@ -930,6 +949,7 @@ q {
 
   .explore-circle {
     left: 25%;
+    top: 30%;
   }
 
   .thumbnail:nth-child(1) {

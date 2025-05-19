@@ -4,12 +4,6 @@
   color: white;
   box-sizing: border-box;
 }
-:root {
-  --primary-White: white; 
-  --primary-paragraph: #aba6be;
-  --primary-span: #c9a110;
-}
-
 h3 {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
