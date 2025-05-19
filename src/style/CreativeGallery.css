@@ -1,9 +1,4 @@
-:root {
-    --primary-White: white;
-    --primary-paragraph: #aba6be;
-    --primary-span: #c9a110;
-    --image-transition-duration: 0.5s; /* Define custom transition duration for image scrolling */
-}
+
 
 .creative-section {
     padding: 50px 20px;
@@ -136,7 +131,7 @@
     cursor: pointer;
 }
 
-.prev, .next {
+.prevG, .nextG {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -148,11 +143,11 @@
     padding: 10px;
 }
 
-.prev {
+.prevG {
     left: 20px;
 }
 
-.next {
+.nextG {
     right: 20px;
 }
 

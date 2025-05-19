@@ -157,7 +157,7 @@ const CreativeGallery = ({ creativeImages, uiuxItems }) => {
             />
           )}
           <button
-            className="prev"
+            className="prevG"
             onClick={(e) => {
               e.stopPropagation();
               handlePrev();
@@ -166,7 +166,7 @@ const CreativeGallery = ({ creativeImages, uiuxItems }) => {
             ❮
           </button>
           <button
-            className="next"
+            className="nextG"
             onClick={(e) => {
               e.stopPropagation();
               handleNext();
