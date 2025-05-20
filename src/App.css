@@ -877,7 +877,7 @@ q {
 @media screen and (max-width: 480px) {
   .content {
     justify-content: center;
-    margin-top: 130px;
+    /* margin-top: 150px; */
 
   }
 
@@ -978,5 +978,11 @@ q {
   .contact-text h2 {
     font-size: 24px;
     margin: 0px;
+  }
+}
+
+@media (max-width: 400px){
+  .content{
+            margin-top: 130px;
   }
 }

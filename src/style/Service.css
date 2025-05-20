@@ -111,6 +111,9 @@
       gap: 8px;
       grid-auto-rows: minmax(150px, auto);
     }
+    .Service-company{
+           margin: 100px 20px;
+    }
   }
   
   @media (max-width: 480px) {
@@ -148,7 +151,8 @@
     }
 
     .service2 {
-        margin: 400px 50px 30px;
+       margin: 100px 20px;
+               padding: 0rem;
         display: flex;
         flex-direction: column;
         gap: 30px;

@@ -67,4 +67,10 @@
   .video-heading{
     width: 70%;
   }
+  .video-heading h2 {
+    font-size: 40px;
+  }
+  .video-heading p {
+    font-size: 12px;
+}
 }

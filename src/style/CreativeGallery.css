@@ -165,7 +165,7 @@
 @media (max-width: 480px) {
     .gallery {
         grid-template-columns: 1fr; /* Single column for small screens */
-        gap: 5px;
+        gap: 30px;
         grid-auto-rows: minmax(120px, auto);
     }
 }

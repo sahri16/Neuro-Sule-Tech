@@ -127,6 +127,9 @@
     .navbar {
       height: 10vh;
     }
+    .logo img {
+    height: 50px;
+}
     .logo {
       margin: 0;
     }

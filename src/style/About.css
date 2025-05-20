@@ -319,6 +319,7 @@ h3 {
     padding: 10px 20px;
     font-size: 14px;
   }
+  
 }
 
 /* Further adjustments for very small screens */
@@ -346,5 +347,8 @@ h3 {
   }
   .team {
     margin: 100px 30px -70px 30px;
+  }
+  .LetsStarted-section {
+    margin-bottom: 70px;
   }
 }
