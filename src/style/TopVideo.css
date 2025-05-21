@@ -58,7 +58,11 @@
     font-size: 18px;
   }
   
-
+@media (max-width:786px) {
+  .top{
+        height: 40vh;
+  }
+}
   /* Further adjustments for very small screens */
 @media screen and (max-width: 480px) {
   .top{

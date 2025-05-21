@@ -291,14 +291,29 @@ h3 {
 
 /* Responsive design */
 @media (max-width: 768px) {
+    .company-story {
+    flex-direction: column;
+    margin: 100px 20px 0px 20px;
+  }
+    .CmpIntro{
+          padding: 0px 30px;
+          width: 100%;
+    }
+    .trusted-clients {
+    padding: 60px 50px;
+    }
   .Started-body {
     flex-direction: column;
     margin: 20px;
   }
+  .LetsStarted-section{
+    
+    margin-bottom: 100px;
+  }
 
   .Started-body-image {
     flex: none;
-    height: 200px; /* Adjust for mobile */
+    height: 200px;
     width: 100%;
   }
 
@@ -319,15 +334,12 @@ h3 {
     padding: 10px 20px;
     font-size: 14px;
   }
+
   
 }
 
-/* Further adjustments for very small screens */
 @media screen and (max-width: 480px) {
-  .company-story {
-    flex-direction: column;
-    margin: 100px 20px 0px 20px;
-  }
+
 
   .cmpyStoryImg img {
     height: 30vh;

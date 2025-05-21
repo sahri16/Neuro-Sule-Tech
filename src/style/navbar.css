@@ -122,9 +122,9 @@
   .navbar-toggler img {
     width: 30px;
   }
-  
-  @media (max-width: 480px){
-    .navbar {
+
+  @media (max-width: 786px) {
+   .navbar {
       height: 10vh;
     }
     .logo img {
@@ -142,12 +142,37 @@
       flex-direction: column;
       position: absolute;
       text-align: center;
-      top: 78px;
-      right: 20px;
+             top: 108px;
+        right: 50px;
       background: #151441;
       box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
       padding: 10px 50px 20px 50px;
       border-radius: 5px;
+    }
+  
+    .navbar-links.open {
+      display: flex;
+    }
+    .navbar-nav {
+      padding: 0;
+      flex-direction: column;
+      text-align: center;
+    }
+    .navbar-nav li {
+      width: 100%; 
+  }
+    .navbar-nav li a {
+      color: #fff !important;
+    }
+    .nav-btn {
+      margin-top: 25px;
+    }
+  }
+  
+  @media screen and (max-width: 480px){
+    .navbar-links {
+      top: 78px;
+      right: 20px;
     }
   
     .navbar-links.open {

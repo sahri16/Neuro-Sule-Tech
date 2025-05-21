@@ -134,7 +134,7 @@ footer {
 
   @media (max-width: 768px){
     footer {
-        height: 90vh;
+        height: 80vh;
       }
       .top-footer {
         flex-direction: column;
@@ -150,7 +150,7 @@ footer {
   }
   @media screen and (max-width:480px){
     footer {
-                height: 130vh;
+                height: 100vh;
     }
     .top-footer{
        width:  120%;

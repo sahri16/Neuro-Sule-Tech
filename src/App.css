@@ -715,7 +715,7 @@ q {
 /* Responsive Design */
 @media (max-width: 768px) {
   .content {
-    padding: 0px 0px;
+          padding: 0px 50px;
     width: 100%;
     margin-top: 250px;
     height: auto;
@@ -794,15 +794,17 @@ q {
 
   .company-text {
     width: 80%;
+        height: 20vh;
   }
 
   .company-quote-box {
     width: 80%;
-    height: 35vh;
+    /* height: 35vh; */
+    height: 30vh;
   }
 
   .company-quote-box h1 {
-    font-size: 25px;
+    font-size: 35px;
   }
 
   .testimonial h3 {
@@ -876,8 +878,9 @@ q {
 /* Further adjustments for very small screens */
 @media screen and (max-width: 480px) {
   .content {
+            padding: 0px 0px;
     justify-content: center;
-    /* margin-top: 150px; */
+    margin-top: 220px;
 
   }
 
@@ -892,11 +895,16 @@ q {
 
   .hero-btn1,
   .hero-btn2 {
-    padding: 10px 20px;
+    padding: 10px 10px;
   }
 
   .copmany-intro {
-    margin-top: 250px;
+    /* margin-top: 250px; */
+            margin-top: 120px;
+  }
+ .company-text {
+    width: 80%;
+        height: 74vh;
   }
 
   .company-quote-box {
@@ -981,8 +989,15 @@ q {
   }
 }
 
-@media (max-width: 400px){
+@media screen and (max-width: 395px) {
   .content{
-            margin-top: 130px;
+    margin-top: 190px;
   }
+  .copmany-intro{
+    margin-top: 130px;
+  }
+  .company-quote-box h1 {
+    font-size: 18px;
+  }
+
 }

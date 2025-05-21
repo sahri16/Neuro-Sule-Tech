@@ -42,7 +42,7 @@
 
 .value p {
   padding-top: 15px;
-  color: var(--primary-paragraph);
+  color: #e3e2e3;
 }
 
 .MissViss {
@@ -76,13 +76,44 @@
 }
 
 .mission-text p {
-  color: var(--primary-paragraph);
+  color:#e3e2e3;
 }
 
 .vission-box {
   margin-top: 33px;
 }
+@media (max-width:786px) {
+  .valueimg{
+    height: 45vh;
+    width: 60%;
+  }
+  .value{
+        padding-left: 20px;
+    padding-top: 200px;
+  }
+  .value h3 {
+    font-size: 30px;
+  }
+  .value p{
+    padding-right: 20px;
+  }
+.MissViss {
+  height: 45vh;
+  width: 40%;
+  }
+  .MissViss1 {
+    height: 21vh;
+  }
+  .mission-text {
+    margin: 15px;
+           gap: 10px;
+    
+  }
 
+  .mission-text h4 {
+    font-size: 16px;
+  }
+}
 @media screen and (max-width:480px) {
   .mission {
     flex-direction: column;
@@ -96,7 +127,7 @@
   }
 
   .value {
-    padding: 140px 10px 0px 10px;
+    padding: 280px 10px 0px 10px;
     gap: 10px;
     display: flex;
     flex-direction: column;
@@ -126,7 +157,7 @@
   }
 
   .mission-text {
-    margin: 30px 10px 0px;
+    margin: 100px 10px 0px;
     gap: 5px;
   }
 
@@ -143,3 +174,15 @@
   }
 
 }
+
+
+
+@media screen and (max-width: 395px) {
+     .value {
+        padding: 220px 10px 0px 10px;
+     }
+         .mission-text {
+        margin: 80px 10px 0px;
+         }
+}
+
