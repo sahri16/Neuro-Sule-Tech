@@ -713,6 +713,7 @@ q {
 }
 
 /* Responsive Design */
+
 @media (max-width: 768px) {
   .content {
           padding: 0px 50px;
@@ -880,7 +881,7 @@ q {
   .content {
             padding: 0px 0px;
     justify-content: center;
-    margin-top: 220px;
+    margin-top: 320px;
 
   }
 
@@ -904,9 +905,11 @@ q {
   }
  .company-text {
     width: 80%;
-        height: 74vh;
+        height: 54vh;
   }
-
+ .company-image {
+            margin-top: 0px;
+  }
   .company-quote-box {
     height: 20vh;
   }
@@ -989,7 +992,7 @@ q {
   }
 }
 
-@media screen and (max-width: 395px) {
+@media screen and (max-width: 390px) {
   .content{
     margin-top: 190px;
   }

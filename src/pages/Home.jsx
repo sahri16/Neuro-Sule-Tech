@@ -179,7 +179,8 @@ function Home() {
       </section>
 
       <section class="company-quote">
-        <div class="company-quote-box" data-aos="zoom-in-up">
+        {/* data-aos="zoom-in-up" */}
+        <div class="company-quote-box" >   
           <h1>DISCOVER <span>EXPERTISE</span> – WHERE <span>INNOVATION</span>, <span>PRECISION</span> & <span>PERFORMANCE</span> MEET!</h1>
         </div>
       </section>
