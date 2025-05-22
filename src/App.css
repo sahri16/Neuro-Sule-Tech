@@ -270,6 +270,7 @@ html {
 }
 
 .company-quote-box h1 {
+  padding: 0px 10px;
   text-align: center;
   font-size: 38px;
   color: #fff;
@@ -905,7 +906,7 @@ q {
   }
  .company-text {
     width: 80%;
-        height: 54vh;
+        height: 74vh;
   }
  .company-image {
             margin-top: 0px;

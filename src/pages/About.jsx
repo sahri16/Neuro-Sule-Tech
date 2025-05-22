@@ -196,7 +196,7 @@ function About() {
             </div>
             <p>companyName@gmail.com</p>
           </div>
-          <a href="/get-started" className="letStarted-btn">
+          <a href="/contact" className="letStarted-btn">
             Let's Start
           </a>
         </div>
